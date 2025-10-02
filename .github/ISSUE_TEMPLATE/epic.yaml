@@ -1,0 +1,38 @@
+name: "Épico: Deploy de Aplicação Spring Boot com Docker e Kubernetes"
+description: "Issue principal para acompanhar o deploy completo da aplicação."
+title: "[ÉPICO] - Deploy de Aplicação Spring Boot com Docker e Kubernetes"
+labels: ["epic", "devops", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Objetivo
+        Esta issue representa o esforço completo para criar, containerizar e implantar a aplicação Spring Boot no Kubernetes, seguindo o "Guia Completo".
+
+  - type: checkboxes
+    id: sub-tasks
+    attributes:
+      label: "Sub-tarefas (Passos do Guia)"
+      description: "Acompanhamento do progresso de cada etapa."
+      options:
+        - label: "Preparação do Ambiente de Desenvolvimento"
+        - label: "Criação do Projeto Spring Boot"
+        - label: "Desenvolvimento do Primeiro Endpoint"
+        - label: "Containerização com Docker (Dockerfile)"
+        - label: "Configuração do Deployment no Kubernetes (deployment.yaml)"
+        - label: "Configuração do Service no Kubernetes (service.yaml)"
+        - label: "Deploy e Monitoramento da Aplicação"
+        - label: "Aplicação de Práticas Recomendadas (Segurança, CI/CD)"
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "Critérios de Aceitação do Épico"
+      description: "O que define que este épico foi concluído com sucesso?"
+      value: |
+        - [ ] Todas as sub-tarefas foram concluídas.
+        - [ ] A aplicação está rodando com sucesso no cluster Kubernetes.
+        - [ ] O acesso à aplicação via Service (LoadBalancer/NodePort) está funcionando.
+        - [ ] A documentação do processo está clara e acessível.
+    validations:
+      required: true

@@ -1,0 +1,45 @@
+name: "Sub-tarefa do Épico"
+description: "Uma tarefa específica que faz parte de um épico maior."
+title: "[SUB-TAREFA] - "
+labels: ["sub-task", "devops"]
+body:
+  - type: input
+    id: epic-issue
+    attributes:
+      label: "Épico Principal"
+      description: "Número da issue do Épico ao qual esta tarefa pertence (ex: #1)."
+      placeholder: "Ex: #1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Contexto da Tarefa"
+      description: "Descreva o objetivo desta sub-tarefa e sua importância dentro do épico."
+      placeholder: "Ex: Esta tarefa foca na criação do Dockerfile otimizado para a aplicação."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks-to-be-done
+    attributes:
+      label: "Tarefas a Serem Realizadas"
+      description: "Liste as atividades ou comandos necessários para completar esta tarefa."
+      value: |
+        - [ ] Atividade 1
+        - [ ] Atividade 2
+        - [ ] Atividade 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "Critérios de Aceitação"
+      description: "O que define que esta sub-tarefa foi concluída com sucesso?"
+      value: |
+        - [ ] O resultado esperado foi alcançado (ex: a imagem Docker foi buildada com sucesso).
+        - [ ] Os artefatos gerados (arquivos, imagens) estão corretos.
+    validations:
+      required: true
